@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import{ HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule

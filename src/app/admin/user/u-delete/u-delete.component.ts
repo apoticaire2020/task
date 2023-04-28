@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-u-delete',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UDeleteComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private activate: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activate.params.subscribe(
+      (data) => {
+        console.log(data)
+      }
+    )
   }
 
 }
